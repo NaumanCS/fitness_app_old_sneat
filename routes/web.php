@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\GoalsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
-Route::post('/submit', [DashboardController::class, 'submit'])->name('submit');
+
+Route::get('/user/goals', [GoalsController::class, 'index'])->name('user.goals');
